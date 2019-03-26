@@ -1,0 +1,66 @@
+<div class="row mb-3">
+  <div class="col-md-12">
+    <h1>
+      All gums
+    </h1>
+
+    <a href="/gums/new" class="btn btn-block btn-outline-secondary">
+      Add a new gum
+    </a>
+  </div>
+</div>
+
+
+<hr>
+
+<div class="row mb-3">
+  <div class="col-md-12">
+    <table class="table">
+      <tr>
+        <th>
+          ID
+        </th>
+
+        <th>
+          Brand
+        </th>
+
+        <th>
+          Created at
+        </th>
+
+        <th>
+          Updated at
+        </th>
+
+        <th>
+        </th>
+      </tr>
+
+      <% @gums.each do |gum| %>
+      <tr>
+        <td>
+          <%= gum.id %>
+        </td>
+
+        <td>
+          <%= gum.brand %>
+        </td>
+
+        <td>
+          <%= time_ago_in_words(gum.created_at) %> ago
+        </td>
+        <td>
+          <%= time_ago_in_words(gum.updated_at) %> ago
+        </td>
+
+        <td>
+          <a href="/gums/<%= gum.id %>">
+            Show details
+          </a>
+        </td>
+      </tr>
+      <% end %>
+    </table>
+  </div>
+</div>

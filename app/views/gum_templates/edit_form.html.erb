@@ -1,0 +1,26 @@
+<h1>
+  Edit gum #<%= @gum.id %>
+</h1>
+
+<hr>
+
+<form action="/update_gum/<%= @gum.id %>" method="post">
+
+  <div class="form-group">
+    <label for="brand">
+      Brand
+    </label>
+
+    <input type="text" id="brand" name="brand" class="form-control" value="<%= @gum.brand %>">
+  </div>
+
+  <button class="btn btn-block btn-outline-secondary">
+    Update gum
+  </button>
+</form>
+
+<hr>
+
+<a href="/gums">
+  Go back
+</a>

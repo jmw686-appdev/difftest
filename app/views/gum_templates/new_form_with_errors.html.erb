@@ -1,0 +1,38 @@
+<!-- Validation failure messages -->
+<% if @gum.present? %>
+  <% if @gum.errors.any? %>
+    <% @gum.errors.full_messages.each do |message| %>
+      <div class="alert alert-danger">
+        <%= message %>
+      </div>
+    <% end %>
+  <% end %>
+<% end %>
+
+<h1>
+  Add a new gum
+</h1>
+
+
+<hr>
+
+<form action="/create_gum" method="post">
+
+  <div class="form-group">
+    <label for="brand">
+      Brand
+    </label>
+
+    <input type="text" id="brand" name="brand" class="form-control" value="<%= @gum.brand %>">
+  </div>
+
+  <button class="btn btn-block btn-outline-secondary">
+    Create gum
+  </button>
+</form>
+
+<hr>
+
+<a href="/gums">
+  Go back
+</a>

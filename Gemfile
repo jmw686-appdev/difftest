@@ -64,6 +64,7 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 group :development, :test do
   gem 'awesome_print'
   gem 'console_ip_whitelist', github: 'firstdraft/console_ip_whitelist'
+  gem "diffy"
   gem 'dotenv-rails'
   gem 'draft_log', github: 'firstdraft/draft_log'
   gem 'grade_runner', github: 'firstdraft/grade_runner'
